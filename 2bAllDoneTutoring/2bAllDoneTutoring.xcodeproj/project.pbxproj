@@ -10,6 +10,7 @@
 		0E88760328F5567100260B2C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E88760228F5567100260B2C /* LoginView.swift */; };
 		0E88760728F5588A00260B2C /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E88760628F5588A00260B2C /* SignupView.swift */; };
 		0E88760928F5596B00260B2C /* BackgroundGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E88760828F5596B00260B2C /* BackgroundGradientView.swift */; };
+		0E88760B28F5BC7F00260B2C /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E88760A28F5BC7F00260B2C /* LogoView.swift */; };
 		0EABF41F28F4A0540014B9E0 /* _bAllDoneTutoringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABF41E28F4A0540014B9E0 /* _bAllDoneTutoringApp.swift */; };
 		0EABF42128F4A0540014B9E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABF42028F4A0540014B9E0 /* ContentView.swift */; };
 		0EABF42328F4A0560014B9E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EABF42228F4A0560014B9E0 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		0E88760228F5567100260B2C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0E88760628F5588A00260B2C /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		0E88760828F5596B00260B2C /* BackgroundGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradientView.swift; sourceTree = "<group>"; };
+		0E88760A28F5BC7F00260B2C /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		0EABF41B28F4A0540014B9E0 /* 2bAllDoneTutoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2bAllDoneTutoring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EABF41E28F4A0540014B9E0 /* _bAllDoneTutoringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _bAllDoneTutoringApp.swift; sourceTree = "<group>"; };
 		0EABF42028F4A0540014B9E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				0E88760828F5596B00260B2C /* BackgroundGradientView.swift */,
+				0E88760A28F5BC7F00260B2C /* LogoView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E88760728F5588A00260B2C /* SignupView.swift in Sources */,
+				0E88760B28F5BC7F00260B2C /* LogoView.swift in Sources */,
 				0E88760328F5567100260B2C /* LoginView.swift in Sources */,
 				0EABF42128F4A0540014B9E0 /* ContentView.swift in Sources */,
 				0E88760928F5596B00260B2C /* BackgroundGradientView.swift in Sources */,
