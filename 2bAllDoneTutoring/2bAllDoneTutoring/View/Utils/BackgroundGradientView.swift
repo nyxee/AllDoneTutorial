@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BackgroundGradientView: View {
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue.opacity(0.5)]),
+        LinearGradient(gradient: Gradient(colors: [Color.blue, Color.blue.opacity(0.5)]),
                        startPoint: .top, endPoint: .bottom)
         .ignoresSafeArea() //to fill the whole screen
     }
