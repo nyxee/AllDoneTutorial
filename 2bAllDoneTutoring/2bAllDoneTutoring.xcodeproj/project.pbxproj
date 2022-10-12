@@ -20,6 +20,7 @@
 		0EECEF3A28F69128004E20F1 /* CustomSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECEF3928F69128004E20F1 /* CustomSecureTextField.swift */; };
 		0EECEF3C28F69434004E20F1 /* PasswordSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECEF3B28F69434004E20F1 /* PasswordSecureField.swift */; };
 		0EECEF3E28F6CCC6004E20F1 /* AuthenticateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECEF3D28F6CCC6004E20F1 /* AuthenticateButtonView.swift */; };
+		0EECEF4028F6E0D1004E20F1 /* UserTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECEF3F28F6E0D1004E20F1 /* UserTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		0EECEF3928F69128004E20F1 /* CustomSecureTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSecureTextField.swift; sourceTree = "<group>"; };
 		0EECEF3B28F69434004E20F1 /* PasswordSecureField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordSecureField.swift; sourceTree = "<group>"; };
 		0EECEF3D28F6CCC6004E20F1 /* AuthenticateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateButtonView.swift; sourceTree = "<group>"; };
+		0EECEF3F28F6E0D1004E20F1 /* UserTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				0EECEF3928F69128004E20F1 /* CustomSecureTextField.swift */,
 				0EECEF3B28F69434004E20F1 /* PasswordSecureField.swift */,
 				0E88760F28F6029400260B2C /* EmailTextField.swift */,
+				0EECEF3F28F6E0D1004E20F1 /* UserTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				0E88761028F6029400260B2C /* EmailTextField.swift in Sources */,
 				0EECEF3A28F69128004E20F1 /* CustomSecureTextField.swift in Sources */,
+				0EECEF4028F6E0D1004E20F1 /* UserTextField.swift in Sources */,
 				0E88760D28F5E91D00260B2C /* CustomTextField.swift in Sources */,
 				0E88760728F5588A00260B2C /* SignupView.swift in Sources */,
 				0EECEF3C28F69434004E20F1 /* PasswordSecureField.swift in Sources */,

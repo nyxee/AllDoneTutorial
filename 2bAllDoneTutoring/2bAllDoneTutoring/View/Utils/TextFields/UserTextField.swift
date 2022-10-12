@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct UserTextField: View {
+    
+    @Binding var text: String
+    let placeHolder: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        CustomTextField(text: $text, placeHolder: Text(placeHolder), imageName: "person")
+            .padding()
+            .background(Color(.init(white: 1, alpha: 0.15)))
+            .cornerRadius(20)
+            .foregroundColor(.white)
     }
 }
 
 struct UserTextField_Previews: PreviewProvider {
     static var previews: some View {
-        UserTextField()
+        
+        ZStack {
+            BackgroundGradientView()
+            UserTextField(text: .constant(""), placeHolder: "User")
+        }
     }
 }
