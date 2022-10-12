@@ -13,39 +13,58 @@ struct LoginView: View {
     @State var password = ""
     
     var body: some View {
-        ZStack{
-            BackgroundGradientView()
-            
-            VStack{
-                LogoView()
-                    .padding(.bottom, 25)
+        
+        NavigationView {
+            ZStack{
+                BackgroundGradientView()
                 
-                VStack(spacing: 20){
-                    EmailTextField(text: $email)
+                VStack{
+                    LogoView()
+                        .padding(.bottom, 25)
                     
-                    PasswordSecureField(text: $password, placeHolder: "Password")
-                }
-                .padding(.horizontal, 32)
-                
-                HStack {
-                    Spacer()
-                    Button {
-                        //Forgot Passwprd Action
-                    } label: {
-                        Text("Forgot Password")
-                            .foregroundColor(.white)
-                            .font(.system(size: 13, weight: .semibold))
-                            .padding(.top)
-                            .padding(.trailing, 28)
+                    VStack(spacing: 20){
+                        EmailTextField(text: $email)
+                        
+                        PasswordSecureField(text: $password, placeHolder: "Password")
                     }
+                    .padding(.horizontal, 32)
+                    
+                    HStack {
+                        Spacer()
+                        Button {
+                            //Forgot Passwprd Action
+                        } label: {
+                            Text("Forgot Password")
+                                .foregroundColor(.white)
+                                .font(.system(size: 13, weight: .semibold))
+                                .padding(.top)
+                                .padding(.trailing, 28)
+                        }
+                    }
+                    
+                    Button {
+                        //  SignIn Action
+                    } label: {
+                        AuthenticateButtonView(text: "Sign In")
+                            .padding()
+                    }
+                    
+                    Spacer()
+                    
+                    NavigationLink {
+                        SignupView() //des
+                            .navigationBarHidden(true)
+                    } label: {
+                        HStack{
+                            Text("Don't have an Account?")
+                                .font(.system(size: 14))
+                            Text("Sign Up")
+                                .font(.system(size: 14, weight: .semibold))
+                        }
+                        .foregroundColor(.white)
+                    }
+
                 }
-                
-                Button {
-                    //  SignIn Action
-                } label: {
-                    AuthenticateButtonView(text: "Sign In")
-                }
-                Spacer()
             }
         }
     }
