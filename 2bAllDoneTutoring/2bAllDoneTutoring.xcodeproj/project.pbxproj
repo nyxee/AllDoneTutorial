@@ -21,6 +21,7 @@
 		0EECEF3C28F69434004E20F1 /* PasswordSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECEF3B28F69434004E20F1 /* PasswordSecureField.swift */; };
 		0EECEF3E28F6CCC6004E20F1 /* AuthenticateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECEF3D28F6CCC6004E20F1 /* AuthenticateButtonView.swift */; };
 		0EECEF4028F6E0D1004E20F1 /* UserTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECEF3F28F6E0D1004E20F1 /* UserTextField.swift */; };
+		0EECEF4228F71145004E20F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EECEF4128F71145004E20F1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		0EECEF3B28F69434004E20F1 /* PasswordSecureField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordSecureField.swift; sourceTree = "<group>"; };
 		0EECEF3D28F6CCC6004E20F1 /* AuthenticateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateButtonView.swift; sourceTree = "<group>"; };
 		0EECEF3F28F6E0D1004E20F1 /* UserTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextField.swift; sourceTree = "<group>"; };
+		0EECEF4128F71145004E20F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		0EABF41D28F4A0540014B9E0 /* 2bAllDoneTutoring */ = {
 			isa = PBXGroup;
 			children = (
+				0EECEF4128F71145004E20F1 /* GoogleService-Info.plist */,
 				0E8875FF28F553E100260B2C /* Model */,
 				0E88760028F553E800260B2C /* View */,
 				0E88760128F553F100260B2C /* ViewModel */,
@@ -205,6 +208,7 @@
 			files = (
 				0EABF42628F4A0560014B9E0 /* Preview Assets.xcassets in Resources */,
 				0EABF42328F4A0560014B9E0 /* Assets.xcassets in Resources */,
+				0EECEF4228F71145004E20F1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +362,7 @@
 				DEVELOPMENT_TEAM = B4P54V6UJ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "All Done";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -388,6 +393,7 @@
 				DEVELOPMENT_TEAM = B4P54V6UJ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "All Done";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
