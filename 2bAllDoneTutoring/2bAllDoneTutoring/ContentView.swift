@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
-        ZStack {
-            LoginView()
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Hello, world!")
+        
+        Group {
+            if viewModel.userSession == nil{
+                LoginView()
+            }else {
+                if let user = viewModel.currentUser {
+                    DashBoardView(user: user)
+                }
             }
-            .padding()
         }
     }
 }
@@ -25,5 +28,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(AuthViewModel.shared)
     }
 }

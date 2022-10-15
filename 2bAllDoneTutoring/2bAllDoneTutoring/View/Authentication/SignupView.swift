@@ -15,7 +15,9 @@ struct SignupView: View {
     @State var confirmPassword = ""
 
     @Environment(\.presentationMode) var mode
-    
+
+    @EnvironmentObject var viewModel: AuthViewModel
+
     var body: some View {
         ZStack{
             BackgroundGradientView()
@@ -35,6 +37,7 @@ struct SignupView: View {
                 
                 Button {
                     //  Sign Up Action
+                    viewModel.register(withEmail: email, password: password, firstName: firstName, lastName: lasttName)
                 } label: {
                     AuthenticateButtonView(text: "Sign Up")
                         .padding()
