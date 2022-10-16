@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E24001828FAD84D0064CA60 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E24001728FAD84D0064CA60 /* AuthViewModel.swift */; };
 		0E24001B28FAF8520064CA60 /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E24001A28FAF8520064CA60 /* DashBoardView.swift */; };
+		0E24001D28FB7DFA0064CA60 /* TODOViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E24001C28FB7DF90064CA60 /* TODOViewModel.swift */; };
 		0E46198028F8FDBE00426427 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0E46197F28F8FDBE00426427 /* FirebaseAnalytics */; };
 		0E46198228F8FDBE00426427 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0E46198128F8FDBE00426427 /* FirebaseAuth */; };
 		0E46198428F8FDBE00426427 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0E46198328F8FDBE00426427 /* FirebaseCrashlytics */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		0E24001728FAD84D0064CA60 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0E24001A28FAF8520064CA60 /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
+		0E24001C28FB7DF90064CA60 /* TODOViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOViewModel.swift; sourceTree = "<group>"; };
 		0E88760228F5567100260B2C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0E88760628F5588A00260B2C /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		0E88760828F5596B00260B2C /* BackgroundGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradientView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				0E24001728FAD84D0064CA60 /* AuthViewModel.swift */,
+				0E24001C28FB7DF90064CA60 /* TODOViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				0EECEF3E28F6CCC6004E20F1 /* AuthenticateButtonView.swift in Sources */,
 				0E24001B28FAF8520064CA60 /* DashBoardView.swift in Sources */,
 				0E88760328F5567100260B2C /* LoginView.swift in Sources */,
+				0E24001D28FB7DFA0064CA60 /* TODOViewModel.swift in Sources */,
 				0EABF42128F4A0540014B9E0 /* ContentView.swift in Sources */,
 				0E88760928F5596B00260B2C /* BackgroundGradientView.swift in Sources */,
 				0EABF41F28F4A0540014B9E0 /* _bAllDoneTutoringApp.swift in Sources */,
