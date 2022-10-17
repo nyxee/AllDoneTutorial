@@ -15,7 +15,7 @@ class TODOViewModel: ObservableObject {
     @Published var  filterTODOSelected: SelectedButton = .all
     @Published var  todosFiltered = [TODO]()
 
-    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var mAuthViewModel: AuthViewModel
 
     init() {
         loadTODOs()
@@ -48,7 +48,7 @@ class TODOViewModel: ObservableObject {
     }
     
     func upload(todo: TODO){
-        guard let user = AuthViewModel.shared.currentUser else { return }
+        guard let user = mAuthViewModel.currentUser else { return }
         
         let data: [String: Any] = ["title": todo.title,
                                    "description": todo.description,
@@ -80,7 +80,7 @@ class TODOViewModel: ObservableObject {
         TO mark an existing TODO as complete
      */
     func complete(todoId: String){
-        guard let uid = AuthViewModel.shared.userSession?.uid else { return }
+        guard let uid = mAuthViewModel.userSession?.uid else { return }
 
         COLLECTION_USERS.document(uid)
             .collection("to-dos")
@@ -92,7 +92,7 @@ class TODOViewModel: ObservableObject {
         TO mark an existing TODO as incomplete
      */
     func unComplete(todoId: String){
-        guard let uid = AuthViewModel.shared.userSession?.uid else { return }
+        guard let uid = mAuthViewModel.userSession?.uid else { return }
 
         COLLECTION_USERS.document(uid)
             .collection("to-dos")

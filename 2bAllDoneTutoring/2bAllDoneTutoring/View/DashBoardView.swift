@@ -10,19 +10,38 @@ import SwiftUI
 struct DashBoardView: View {
     let user: AppUser
     
-    @EnvironmentObject var viewModel: AuthViewModel
-
+    @State var searchText: String = ""
+    
+    @EnvironmentObject var mAuthViewModel: AuthViewModel //access an observable with a shared environment variable.
+    @ObservedObject var mTODOViewModel = TODOViewModel() //access an observable normally
+    
     var body: some View {
-        VStack {
-            Text("DashBoard View")
-            
-            Button {
-                AuthViewModel.shared.signOut()
-            } label: {
-                Text("Log Out")
-            }
-            .padding()
-        }
+        ZStack {
+            VStack {
+                HStack {
+                    Spacer()
+                    Text("- AllDone -")
+                        .font(.system(size: 24))
+                        .fontWeight(.semibold)
+                    Spacer()
+                }
+                .overlay {
+                    HStack {
+                        Spacer()
+                        Button {
+                            mAuthViewModel.signOut()
+                        } label: {
+                            Text("Logout")
+                                .foregroundColor(Color(.systemGray))
+                        }
+                        .padding(.trailing)
+                    }//HSTACK
+                }//Overlay
+                
+                SearchBarView(searchText: $searchText)
+                    .padding()
+            }//VStack
+        }//Zstack
     }
 }
 
