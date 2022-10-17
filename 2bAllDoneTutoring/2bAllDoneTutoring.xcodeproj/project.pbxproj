@@ -40,6 +40,8 @@
 		0EECEF3E28F6CCC6004E20F1 /* AuthenticateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECEF3D28F6CCC6004E20F1 /* AuthenticateButtonView.swift */; };
 		0EECEF4028F6E0D1004E20F1 /* UserTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EECEF3F28F6E0D1004E20F1 /* UserTextField.swift */; };
 		0EECEF4228F71145004E20F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EECEF4128F71145004E20F1 /* GoogleService-Info.plist */; };
+		0EFA6C8C28FD75AE0015DAFF /* TODOButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA6C8B28FD75AE0015DAFF /* TODOButtonStack.swift */; };
+		0EFA6C8E28FD7E4C0015DAFF /* AddTODOLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA6C8D28FD7E4C0015DAFF /* AddTODOLogo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		0EECEF3D28F6CCC6004E20F1 /* AuthenticateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateButtonView.swift; sourceTree = "<group>"; };
 		0EECEF3F28F6E0D1004E20F1 /* UserTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextField.swift; sourceTree = "<group>"; };
 		0EECEF4128F71145004E20F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0EFA6C8B28FD75AE0015DAFF /* TODOButtonStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOButtonStack.swift; sourceTree = "<group>"; };
+		0EFA6C8D28FD7E4C0015DAFF /* AddTODOLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTODOLogo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 				0E88760828F5596B00260B2C /* BackgroundGradientView.swift */,
 				0E88760A28F5BC7F00260B2C /* LogoView.swift */,
 				0EB5CD8C28FD288A008506C8 /* SearchBarView.swift */,
+				0EFA6C8B28FD75AE0015DAFF /* TODOButtonStack.swift */,
+				0EFA6C8D28FD7E4C0015DAFF /* AddTODOLogo.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				0EC942F728FA90EA00D8B991 /* TODO.swift in Sources */,
 				0E24001828FAD84D0064CA60 /* AuthViewModel.swift in Sources */,
 				0E88760728F5588A00260B2C /* SignupView.swift in Sources */,
+				0EFA6C8C28FD75AE0015DAFF /* TODOButtonStack.swift in Sources */,
 				0EB5CD8D28FD288A008506C8 /* SearchBarView.swift in Sources */,
 				0EECEF3C28F69434004E20F1 /* PasswordSecureField.swift in Sources */,
 				0E88760B28F5BC7F00260B2C /* LogoView.swift in Sources */,
@@ -315,6 +322,7 @@
 				0EABF42128F4A0540014B9E0 /* ContentView.swift in Sources */,
 				0E88760928F5596B00260B2C /* BackgroundGradientView.swift in Sources */,
 				0EABF41F28F4A0540014B9E0 /* _bAllDoneTutoringApp.swift in Sources */,
+				0EFA6C8E28FD7E4C0015DAFF /* AddTODOLogo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

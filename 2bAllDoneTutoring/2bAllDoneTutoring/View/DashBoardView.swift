@@ -40,6 +40,15 @@ struct DashBoardView: View {
                 
                 SearchBarView(searchText: $searchText)
                     .padding()
+                
+                TODOButtonStack(mTODOViewModel: mTODOViewModel)
+                    .padding(.horizontal)
+                    .padding(.bottom)
+                
+                if mTODOViewModel.todosFiltered.isEmpty {
+                    AddTODOLogo()
+                        .padding()
+                }
             }//VStack
         }//Zstack
     }
