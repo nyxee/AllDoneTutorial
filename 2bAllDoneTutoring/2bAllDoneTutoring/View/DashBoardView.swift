@@ -47,7 +47,7 @@ struct DashBoardView: View {
                 
                 if mTODOViewModel.todosFiltered.isEmpty {
                     AddTODOLogo()
-                        .padding()
+                        .padding(.top)
                 }
             }//VStack
         }//Zstack
