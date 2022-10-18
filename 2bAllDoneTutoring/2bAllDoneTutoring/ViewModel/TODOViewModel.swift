@@ -77,6 +77,14 @@ class TODOViewModel: ObservableObject {
             .delete(completion: completion)
     }
 
+    func deleteItem(indexSet: IndexSet){
+        indexSet.forEach { i in
+            let todoid = todosFiltered[i].documentID!
+            delete(todoId: todoid)
+        }
+        todosFiltered.remove(atOffsets: indexSet)
+    }
+    
     /**
         TO mark an existing TODO as complete
      */
@@ -99,6 +107,10 @@ class TODOViewModel: ObservableObject {
             .collection("to-dos")
             .document(todoId)
             .updateData(["completed": false], completion: completion)
+    }
+    
+    func moveItem(from: IndexSet, to: Int){
+        todosFiltered.move(fromOffsets: from, toOffset: to)
     }
     
     func completion(error: Error?){

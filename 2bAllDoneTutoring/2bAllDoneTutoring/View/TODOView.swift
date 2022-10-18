@@ -59,7 +59,6 @@ struct TODOView: View {
         .frame(width: UIScreen.main.bounds.size.width - 25, height: 70)
         .background(Color(.systemGray6))
         .cornerRadius(20)
-        
     }
 }
 

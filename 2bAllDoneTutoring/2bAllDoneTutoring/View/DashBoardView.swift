@@ -27,6 +27,7 @@ struct DashBoardView: View {
                 }
                 .overlay {
                     HStack {
+                        EditButton()
                         Spacer()
                         Button {
                             mAuthViewModel.signOut()
@@ -50,23 +51,9 @@ struct DashBoardView: View {
                         .padding(.top)
                 }
                 
-                ScrollView {
-                    VStack(spacing: 15){
-                        ForEach(mTODOViewModel.todosFiltered, id: \.id) { todo in
-                            
-                            if searchText == "" {
-                                //TODOView(mTODO: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), mTODOViewModel: mTODOViewModel)
-                                show(todo: todo)
-                            }else {
-                                if todo.title.lowercased().contains(searchText.lowercased()) ||
-                                    todo.description.lowercased().contains(searchText.lowercased()) {
-                                    //TODOView(mTODO: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), mTODOViewModel: mTODOViewModel)
-                                    show(todo: todo)
-                                }
-                            }
-                        }//ForEach
-                    }//VStack
-                }//ScrollView
+//                scrollView()
+                listView()
+                
             }//VStack
             .overlay { //Floating Action Button (Name of this view in Android)..
                 VStack{
@@ -96,11 +83,61 @@ struct DashBoardView: View {
         }//Zstack
     }
     
+    func scrollView() -> some View {
+        ScrollView {
+            VStack(spacing: 15){
+                ForEach(mTODOViewModel.todosFiltered, id: \.id) { todo in
+                    
+                    if searchText == "" {
+                        show(todo: todo)
+                    }else {
+                        if todo.title.lowercased().contains(searchText.lowercased()) ||
+                            todo.description.lowercased().contains(searchText.lowercased()) {
+                            show(todo: todo)
+                        }
+                    }
+                }//ForEach
+            }//VStack
+        }//ScrollView
+    }
+    
+    func listView() -> some View {
+        NavigationView {
+            List {
+                ForEach(mTODOViewModel.todosFiltered, id: \.id) { todo in
+                    
+                    if searchText == "" {
+                        show(todo: todo)
+                    }else {
+                        if todo.title.lowercased().contains(searchText.lowercased()) ||
+                            todo.description.lowercased().contains(searchText.lowercased()) {
+                            show(todo: todo)
+                        }
+                    }
+                }//ForEach
+                .onDelete(  perform: mTODOViewModel.deleteItem )
+                .onMove { indices, newOffset in
+                    mTODOViewModel.moveItem(from: indices, to: newOffset) //Note: i left this here as an example. we can write this in the form of the above delete function call.
+                }
+            }//List
+            .listStyle(PlainListStyle())
+        }
+    }
+    
     //@ViewBuilder  func show(todo: TODO) -> some View //[[[[ Maybe i should change the function definition to that??]]]
     func show(todo: TODO) -> some View{
         //return??
         TODOView(mTODO: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), mTODOViewModel: mTODOViewModel)
-        
+            .onTapGesture {
+                print("An item has been tapped, DETAIL::", todo.id ?? "")
+            }
+            .onTapGesture(count: 2) {
+                print("An item has been double tapped, DETAIL::", todo.id ?? "")
+            }
+            .onLongPressGesture {
+                print("An item has been long pressed, DETAIL::", todo.id ?? "")
+                
+            }
         //TODOView(mTODO: todo, mTODOViewModel: mTODOViewModel)
     }
 }
