@@ -49,8 +49,59 @@ struct DashBoardView: View {
                     AddTODOLogo()
                         .padding(.top)
                 }
+                
+                ScrollView {
+                    VStack(spacing: 15){
+                        ForEach(mTODOViewModel.todosFiltered, id: \.id) { todo in
+                            
+                            if searchText == "" {
+                                //TODOView(mTODO: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), mTODOViewModel: mTODOViewModel)
+                                show(todo: todo)
+                            }else {
+                                if todo.title.lowercased().contains(searchText.lowercased()) ||
+                                    todo.description.lowercased().contains(searchText.lowercased()) {
+                                    //TODOView(mTODO: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), mTODOViewModel: mTODOViewModel)
+                                    show(todo: todo)
+                                }
+                            }
+                        }//ForEach
+                    }//VStack
+                }//ScrollView
             }//VStack
+            .overlay { //Floating Action Button (Name of this view in Android)..
+                VStack{
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        Button {
+                            mTODOViewModel.showCreateTODOView = true
+                        } label: {
+                            Image(systemName: "plus")
+                                .padding()
+                                .foregroundColor(.white)
+                                .font(.system(size: 30))
+                                .frame(width: 60, height: 60)
+                                .background(Color("lightBlue"))
+                                .cornerRadius(20)
+                        }
+                        .padding(30)
+                    }
+                }
+            }//Overlay
+            
+            if mTODOViewModel.showCreateTODOView {
+                BlankView()
+                CreateTODOView(user: user, mTODOViewModel: mTODOViewModel)
+            }
         }//Zstack
+    }
+    
+    //@ViewBuilder  func show(todo: TODO) -> some View //[[[[ Maybe i should change the function definition to that??]]]
+    func show(todo: TODO) -> some View{
+        //return??
+        TODOView(mTODO: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), mTODOViewModel: mTODOViewModel)
+        
+        //TODOView(mTODO: todo, mTODOViewModel: mTODOViewModel)
     }
 }
 

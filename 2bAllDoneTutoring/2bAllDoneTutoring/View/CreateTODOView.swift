@@ -41,7 +41,8 @@ struct CreateTODOView: View {
                 } label: {
                     CancelTODOButton()
                 }
-            }
+            }//HStack
+            .padding(.bottom, 10)
             Spacer()
         }//VStack
         .frame(width: UIScreen.main.bounds.size.width - 100, height: 360)

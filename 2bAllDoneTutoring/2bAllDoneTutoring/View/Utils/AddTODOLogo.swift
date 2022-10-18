@@ -17,18 +17,18 @@ struct AddTODOLogo: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 150, height: 150)
-                .background(colorScheme == .dark ? .clear : .blue)
+                .background(colorScheme == .dark ? .clear : .black)
                 .cornerRadius(50)
             
             if #available(iOS 16.0, *) {
                 Text("Add Your First TODO")
-                    .background(colorScheme == .dark ? .clear : .blue)
+                    .background(colorScheme == .dark ? .clear : .white)
                     .font(.system(size: 25))
                     .fontWeight(.semibold)
             } else {
                 // Fallback on earlier versions
                 Text("Add Your First TODO")
-                    .background(colorScheme == .dark ? .clear : .blue)
+                    .background(colorScheme == .dark ? .clear : .white)
                     .font(.system(size: 25))
             }
         }
