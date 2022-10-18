@@ -121,6 +121,10 @@ struct DashBoardView: View {
                 }
             }//List
             .listStyle(PlainListStyle())
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                //.navigationBarBackButtonHidden(true)
+                //.edgesIgnoringSafeArea(.all)
         }
     }
     
