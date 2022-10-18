@@ -164,12 +164,12 @@
 		0E88760E28F6026D00260B2C /* TextFields */ = {
 			isa = PBXGroup;
 			children = (
-				0EEA792828FDAC2A00D2A327 /* TODOTextField.swift */,
 				0E88760C28F5E91D00260B2C /* CustomTextField.swift */,
-				0EECEF3928F69128004E20F1 /* CustomSecureTextField.swift */,
-				0EECEF3B28F69434004E20F1 /* PasswordSecureField.swift */,
+				0EEA792828FDAC2A00D2A327 /* TODOTextField.swift */,
 				0E88760F28F6029400260B2C /* EmailTextField.swift */,
 				0EECEF3F28F6E0D1004E20F1 /* UserTextField.swift */,
+				0EECEF3928F69128004E20F1 /* CustomSecureTextField.swift */,
+				0EECEF3B28F69434004E20F1 /* PasswordSecureField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
