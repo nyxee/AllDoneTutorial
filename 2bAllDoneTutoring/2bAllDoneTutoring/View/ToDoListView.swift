@@ -1,5 +1,6 @@
 //
-//  DashBoardView.swift
+//  ToDoListView.swift
+//  DashBoardView.swift (the former name of the file)
 //  2bAllDoneTutoring
 //
 //  Created by Andrew Nyago on 15/10/2022.
@@ -7,7 +8,10 @@
 
 import SwiftUI
 
-struct DashBoardView: View {
+/**
+ ToDo List View
+ */
+struct ToDoListView: View {
     let user: AppUser
     
     @State var searchText: String = ""
@@ -78,7 +82,7 @@ struct DashBoardView: View {
             
             if mTODOViewModel.showCreateTODOView {
                 BlankView()
-                CreateTODOView(user: user, mTODOViewModel: mTODOViewModel)
+                ToDoView(user: user, mTODOViewModel: mTODOViewModel)
             }
         }//Zstack
     }
@@ -131,7 +135,7 @@ struct DashBoardView: View {
     //@ViewBuilder  func show(todo: TODO) -> some View //[[[[ Maybe i should change the function definition to that??]]]
     func show(todo: TODO) -> some View{
         //return??
-        TODOView(mTODO: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), mTODOViewModel: mTODOViewModel)
+        ToDoLIView(mTODO: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), mTODOViewModel: mTODOViewModel)
             .onTapGesture {
                 print("An item has been tapped, DETAIL::", todo.id ?? "")
             }
@@ -148,6 +152,6 @@ struct DashBoardView: View {
 
 struct DashBoardView_Previews: PreviewProvider {
     static var previews: some View {
-        DashBoardView(user: appUSer01)
+        ToDoListView(user: appUSer01)
     }
 }

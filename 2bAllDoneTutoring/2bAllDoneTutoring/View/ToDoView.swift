@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct CreateTODOView: View {
+/**
+ This view will be used when creating a new TODO Item and when viewing an existing item. The item will be editable and also saved to firebase.
+ We could also enable browsing through the Items (Forward and backwards)
+ **/
+struct ToDoView: View {
     
     let user: AppUser
     @ObservedObject var mTODOViewModel: TODOViewModel
@@ -53,7 +57,7 @@ struct CreateTODOView: View {
 
 struct CreateTODOView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateTODOView(user: appUSer01, mTODOViewModel: TODOViewModel())
+        ToDoView(user: appUSer01, mTODOViewModel: TODOViewModel())
     }
 }
 
@@ -62,7 +66,7 @@ struct CreateTODOButton: View {
         Text("Create")
             .font(.headline)
             .foregroundColor(.white)
-            .frame(width: 150, height: 50)
+            .frame(width: 150, height: 40)
             .background(Color.blue.opacity(0.6))
             .clipShape(Capsule())
     }
@@ -73,7 +77,7 @@ struct CancelTODOButton: View {
         Text("Cancel")
             .font(.headline)
             .foregroundColor(.white)
-            .frame(width: 100, height: 50)
+            .frame(width: 100, height: 40)
             .background(Color.red.opacity(0.6))
             .clipShape(Capsule())
     }

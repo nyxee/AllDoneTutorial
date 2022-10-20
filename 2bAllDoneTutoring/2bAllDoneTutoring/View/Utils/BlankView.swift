@@ -17,7 +17,7 @@ struct BlankView: View {
         .opacity(0.5)
         .edgesIgnoringSafeArea(.all)
         .onTapGesture {
-            //...
+            //TODO: I would like to return to the ListView when this view is tapped.
         }
     }
 }

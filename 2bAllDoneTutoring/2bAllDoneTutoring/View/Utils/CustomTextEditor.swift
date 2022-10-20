@@ -4,10 +4,6 @@
 //
 //  Created by Andrew Nyago on 17/10/2022.
 //
-
-import SwiftUI
-
-
 import SwiftUI
 
 struct CustomTextEditor: View {
@@ -64,6 +60,7 @@ struct CustomTextEditor: View {
             
         }
         .frame(height: 120)
+        .accentColor(.green)
         .background(Color(.systemGray6))
         .cornerRadius(10)
         .foregroundColor(colorScheme == .dark ? .white : .black)

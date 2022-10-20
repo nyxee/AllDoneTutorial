@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct TODOView: View {
+/**
+ ToDo List Item View
+ */
+struct ToDoLIView: View {
     
     var mTODO: TODO
     @ObservedObject var mTODOViewModel: TODOViewModel
@@ -64,6 +67,6 @@ struct TODOView: View {
 
 struct TODOView_Previews: PreviewProvider {
     static var previews: some View {
-        TODOView(mTODO: todo01, mTODOViewModel: TODOViewModel())
+        ToDoLIView(mTODO: todo01, mTODOViewModel: TODOViewModel())
     }
 }

@@ -15,3 +15,4 @@ let todo03 = TODO(id:"3", ownerUid: "3", title: "Do Homework", description: "Mus
 let todo04 = TODO(id:"4", ownerUid: "4", title: "Do Homework Again", description: "Must be from Publix", TODOType: "School", completed: false)
 let todo05 = TODO(id:"5", ownerUid: "2", title: "Pork", description: "", TODOType: "Groceries", completed: true)
 
+let todoList = [todo01, todo02, todo03, todo04, todo05]
