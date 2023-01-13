@@ -91,7 +91,6 @@ struct ToDoListView: View {
         ScrollView {
             VStack(spacing: 15){
                 ForEach(mTODOViewModel.todosFiltered, id: \.id) { todo in
-                    
                     if searchText == "" {
                         show(todo: todo)
                     }else {
